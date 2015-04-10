@@ -113,7 +113,7 @@ public class readAndMultiply{
 		} catch (NumberFormatException ex){
 		  System.out.println(ex);
 		}
-    return null;
+    		return null;
 	}
 
 	public static String StringDimension(String[] arr) {
@@ -121,18 +121,18 @@ public class readAndMultiply{
                 for (int i = 0; i < 2; i++)
                     str += arr[i];
                     return str;
-    }
+    	}
 
-  public static String StringMatrix(String[] arr) {
+  	public static String StringMatrix(String[] arr) {
               String str = "";
               for (int i = 0; i < arr.length; i++){
               	str += arr[i];
               }
-		    return str;                    
-  }
+	      return str;                    
+  	}
 
-  public static String arrToString(int[][] arr) {
-  	String str = "[";
+  	public static String arrToString(int[][] arr) {
+  		String str = "[";
   		for (int i = 0; i < arr.length; i++){
   			for(int j = 0; j < arr[i].length; j++)
   				
@@ -140,7 +140,7 @@ public class readAndMultiply{
   				str += "]" + "\n" + "[";
   				continue;
   			}
-  		return str;
+  			return str;
 	}
 
 	public static String arrToStringInt(int[] arr) {
