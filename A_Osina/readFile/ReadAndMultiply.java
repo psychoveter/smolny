@@ -1,4 +1,3 @@
-// I hope I haven't crashed anything while I've been commenting.
 import java.io.BufferedReader;
 import java.io.FileReader;
 
