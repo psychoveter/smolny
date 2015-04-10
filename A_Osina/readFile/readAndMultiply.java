@@ -3,20 +3,15 @@ import java.io.FileReader;
 
 public class readAndMultiply{
 	public static void main(String[] args){
-
-	 	String aFile ="/home/grib/Desktop/a.txt";
-		String bFile ="/home/grib/Desktop/b.txt";
+		String aFile ="/home/grib/Desktop/a.txt"; //address of the file;
+		String bFile ="/home/grib/Desktop/b.txt"; //address of the file;
 
 		int[][] one = readMatrix(aFile);
 		int[][] two = readMatrix(bFile);
 		int[][] three = multiply(one, two);		
 
-		//String result = arrsToString(one);
-		//System.out.println(result);
-		//String wresult = arrsToString(two);
-		//System.out.println(wresult);
-		String resultF = arrsToString(three);
-		System.out.println(resultF);
+		String result = arrsToString(three);
+		System.out.println(result);
 	}
 
 	public static int[][] readMatrix(String h){
@@ -25,9 +20,8 @@ public class readAndMultiply{
 		int c = 0;
 		int[][] readingResult = new int[r][c];
 
-
 		try (BufferedReader br = new BufferedReader(new FileReader(h))){
-
+			// String a is needed to read the first line and get the matrix dimention
 	 		 String a = null;
 	 		 String[] dim = new String[1];
 	 		 
@@ -35,18 +29,23 @@ public class readAndMultiply{
 				dim = a.split(" ");
 	 		    break; 
 	 		 }
+	 		 //StringDimention method converts only the first line from the file into String without spaces
 	 		 String dimResult = StringDimension(dim);
+	 		 
+	 		 //In next line I get dimention (number of rows & columns) of matrix but it is unit (Ex. 23 will mean 2 columns and 3 rows)  
 	 		 Integer dimension = Integer.parseInt(dimResult);
 	 		 
+	 		 //Then I separate dimResult into rows and columns through mod(str.37) and sth else(39).
 	 		 int row = dimension % 10;
+	 		 
+	 		 //I need r & c (I init it earlier(str.19-20)) because I want to return int[][] as a result of this...and I have not found better idea
 	 		 r += row;
 	 		 int col = (dimension - row) / 10;
 	 		 c += col;
-	 		
-	 		 int[][] matrixOne = new int[row][col];
-	 		 
-	 		 String b = null;
 
+			 	 		 
+	 		 String b = null;
+	 		 // Firstly, I create an array int[] and write down the rows of the matrix (but it is also unit and I will separate it later)
 	 		 int[] matrixRows = new int[row];
 	 		 int counter = 0;
 	 		 
@@ -58,10 +57,14 @@ public class readAndMultiply{
 			 		matrixRows[counter] = x;
 			 		counter++;
 		   }
-	 	
+	 		 // Create new array int[] for columns
 	 		 int[] matrixColumns = new int[col];
+	 		 
+	 		 // The final matrix:
 	 		 int[][] matrix =  new int[row][col];
 	 		
+	 		 // From the next line to the line 92 I separate elems from matrixRows (which are united rows) and write it down to the final matrix
+	 		 // and I start to write final elems from the right up coner =) because here I also use mod to get digits from matrixRows elems =) so...
 	 		 int counti = 0;
 	 		 int countj = col-1;
 	 		 
