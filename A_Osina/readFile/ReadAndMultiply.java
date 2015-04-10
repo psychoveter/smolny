@@ -1,10 +1,11 @@
+// I hope I haven't crashed anything while I've been commenting.
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class readAndMultiply{
+public class ReadAndMultiply{
 	public static void main(String[] args){
-		String aFile ="/home/grib/Desktop/a.txt"; //address of the file;
-		String bFile ="/home/grib/Desktop/b.txt"; //address of the file;
+		String aFile ="/home/grim/Desktop/a.txt"; //need to be changed to the address of your file;
+		String bFile ="/home/grim/Desktop/b.txt"; //need to be changed to the address of your file;
 
 		int[][] one = readMatrix(aFile);
 		int[][] two = readMatrix(bFile);
@@ -21,7 +22,7 @@ public class readAndMultiply{
 		int[][] readingResult = new int[r][c];
 
 		try (BufferedReader br = new BufferedReader(new FileReader(h))){
-			// String a is needed to read the first line and get the matrix dimention
+			//Firstly, I need to read the first line to know (and build it) the matrix dimention
 	 		 String a = null;
 	 		 String[] dim = new String[1];
 	 		 
@@ -64,7 +65,7 @@ public class readAndMultiply{
 	 		 int[][] matrix =  new int[row][col];
 	 		
 	 		 // From the next line to the line 92 I separate elems from matrixRows (which are united rows) and write it down to the final matrix
-	 		 // and I start to write final elems from the right up coner =) because here I also use mod to get digits from matrixRows elems =) so...
+	 		 // and I start to write final elems (to the final matrix) from the right up coner =) because here I also use mod to get digits from matrixRows elems =)
 	 		 int counti = 0;
 	 		 int countj = col-1;
 	 		 
