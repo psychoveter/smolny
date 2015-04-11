@@ -3,8 +3,8 @@ import java.io.FileReader;
 
 public class ReadAndMultiply{
 	public static void main(String[] args){
-		String aFile ="/home/grim/Desktop/a.txt"; //need to be changed to the address of your file;
-		String bFile ="/home/grim/Desktop/b.txt"; //need to be changed to the address of your file;
+		String aFile ="./a.txt"; 
+		String bFile ="./b.txt";
 
 		int[][] one = readMatrix(aFile);
 		int[][] two = readMatrix(bFile);
