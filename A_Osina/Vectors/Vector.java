@@ -24,7 +24,7 @@ public class Vector{
 
 	}
 	
-	// Сложение двух векторов
+	// Сложение для двух векторов
 	public static int[] addition(int[] A, int[] B){
 		
 		int[] result = new int[A.length];
@@ -34,7 +34,7 @@ public class Vector{
 			for(int i = 0; i < A.length; i++){
 			C[i] = A[i] + B[i];
 			}
-	    result = C;
+		 	result = C;
 		} else {
 			result = null;
 		}	
@@ -51,7 +51,7 @@ public class Vector{
 			for(int i = 0; i < A.length; i++){
 			C[i] = A[i] - B[i];
 			}
-	    result = C;
+		 	result = C;
 		} else {
 			result = null;
 		}	
@@ -63,16 +63,16 @@ public class Vector{
 
 		for(int i = 0; i < A.length; i++){
 			A[i] *= x;
-			}
-			return A;
+		}
+		return A;
 	}
 
 	// Делает из массива строку
 	public static String arrToString(int[] arr) {
-	String str = "[";
-	for (int i = 0; i < arr.length; i++)
-		str += arr[i] + ",";
-		str += "]";
-		return str; 
+		String str = "[";
+		for (int i = 0; i < arr.length; i++)
+			str += arr[i] + ",";
+			str += "]";
+			return str; 
 	}
 }
