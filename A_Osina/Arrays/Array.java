@@ -132,12 +132,11 @@ public class Array{
 		return result;
 	}
 
-	// Это превращает массив в строку :)
-		public static String arrToString(int[] arr) {
-		String str = "[";
-		for (int i = 0; i < arr.length; i++)
-			str += arr[i] + ",";
-			str += "]";
-			return str; 
+	public static String arrToString(int[] arr) {
+	String str = "[";
+	for (int i = 0; i < arr.length; i++)
+		str += arr[i] + ",";
+		str += "]";
+		return str; 
 	}
 }
