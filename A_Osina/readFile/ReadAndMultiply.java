@@ -21,7 +21,7 @@ public class ReadAndMultiply{
 		int[][] readingResult = new int[r][c];
 
 		try (BufferedReader br = new BufferedReader(new FileReader(h))){
-			//Firstly, I need to read the first line to know (and build it) the matrix dimention
+			//Firstly, I need to read the first line to know (and build it) the matrix dimension
 	 		 String a = null;
 	 		 String[] dim = new String[1];
 	 		 
