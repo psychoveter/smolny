@@ -27,8 +27,8 @@ public class Array{
 		System.out.println("Reversed array: " + arrStringD);
 
 		int[] g = copy(arr);
-    String arrStringG = arrToString(g);
-    System.out.println("A new copy of Array #1: " + arrStringG);
+		String arrStringG = arrToString(g);
+		System.out.println("A new copy of Array #1: " + arrStringG);
 
 		String arrStringA = arrToString(arr);
 		System.out.println("Array #1 once again: " + arrStringA);
@@ -46,10 +46,8 @@ public class Array{
 	public static int maximum(int[] arr) {
 
 		int max = arr[0];
-
 		for(int i = 0; i < arr.length; i++) {
 			if(max < arr[i]) max = arr[i];
-						
 		}
 		return max;
 	}
@@ -58,10 +56,8 @@ public class Array{
 	public static int minimum(int[] arr) {
 		
 		int min = arr[0];
-		
 		for(int i = 0; i < arr.length; i++) {
 			if(min > arr[i]) min = arr[i];
-						
 		}
 		return min;
 	}
@@ -70,24 +66,20 @@ public class Array{
 	public static int medium(int[] arr) {
 		
 		int sum = 0;
-
 		for(int i = 0; i < arr.length; i++) {
 			sum += arr[i];
 		}
-
 		int md = sum/arr.length;
-
 		return md;	
 	}
 
 	// Return the sum of elems
 	public static int summarize(int[] arr) {
-	
-				int sum = 0;
 
-				for(int i = 0; i < arr.length; i++) {
-					sum += arr[i];
-				}
+		int sum = 0;
+		for(int i = 0; i < arr.length; i++) {
+			sum += arr[i];
+		}
 		return sum;	
 	}
 
@@ -115,14 +107,14 @@ public class Array{
 
 	public static int[] copy(int[] arr){
 
-        int[] copyArr = new int[arr.length];
-        for(int i = 0; i < arr.length; i++) {
-            copyArr[i] = arr[i];
-        }
-        return copyArr;
-    }
+	        int[] copyArr = new int[arr.length];
+	        for(int i = 0; i < arr.length; i++) {
+	            copyArr[i] = arr[i];
+	        }
+	        return copyArr;
+    	}
 
-    public static boolean compare(int[] arr, int[] arr2){
+    	public static boolean compare(int[] arr, int[] arr2){
 		
 		boolean result = true;
 
