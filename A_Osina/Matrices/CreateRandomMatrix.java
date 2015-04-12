@@ -8,10 +8,7 @@ public class CreateRandomMatrix {
 				A[i][j] = (int) (Math.random()*21)-10;
 			}
 		}
-		for(int i = 0; i < A.length; i++) {
-			for(int j = 0; j < A[i].length; j++) {
-			}
-		}
+		
 		String result = arrToString(A);
 		System.out.print(result);
 	}
