@@ -1,3 +1,4 @@
+// Only for matrices with single digits as elements
 import java.io.BufferedReader;
 import java.io.FileReader;
 
