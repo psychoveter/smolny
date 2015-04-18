@@ -67,7 +67,7 @@ public class Matrix {
 
 	public static int[][] matrixVecMultiply(int[][] A, int[] V){
 
-		// для вектора-строки
+		// for row vector
 		if(A.length == V.length){
 			int[][] Vone = new int[1][V.length];
 			for(int i = 0; i < Vone.length; i++){
@@ -88,7 +88,7 @@ public class Matrix {
 		return C;
 		
 		}
-		// для вектора-столбца
+		// for column vector
 		else if(A[0].length == V.length){
 			int[][] Vtwo = new int[V.length][1];
 			for(int i = 0; i < Vtwo.length; i++){
@@ -109,7 +109,7 @@ public class Matrix {
 		return D;
 	
 		} else { 
-			//When wrong matrices dimentions appear
+			//When wrong matrices dimensions appear
 			return null;
 		}
 	}	

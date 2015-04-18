@@ -24,7 +24,7 @@ public class Vector{
 
 	}
 	
-	// Сложение для двух векторов
+	// vectors' sum
 	public static int[] addition(int[] A, int[] B){
 		
 		int[] result = new int[A.length];
@@ -41,7 +41,7 @@ public class Vector{
 		return result;
 	} 
 
-	// Вычитание для двух векторов
+	// vectors' difference
 	public static int[] substraction(int[] A, int[] B){
 
 		int[] result = new int[A.length];
@@ -58,7 +58,7 @@ public class Vector{
 		return result;
 	}
 
-	// Умножение вектора на скаляр
+	// Multiplication by a scalar
 	public static int[] multiply(int[] A, int x){
 
 		for(int i = 0; i < A.length; i++){
@@ -67,7 +67,6 @@ public class Vector{
 		return A;
 	}
 
-	// Делает из массива строку
 	public static String arrToString(int[] arr) {
 		String str = "[";
 		for (int i = 0; i < arr.length; i++)
