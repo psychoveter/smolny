@@ -30,7 +30,7 @@ public class BinaryALotLikeSort {
 				}
 			}
 		}
-		// The next line seems stupid... :\
+		
 		return 0;
 	}
 }
