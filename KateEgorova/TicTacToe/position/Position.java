@@ -117,7 +117,7 @@ public class Position {
 		return value;
 	}
 
-	public int bestMove() {//we have possibleMoves and we want to find the max of it/ alpha-beta pruning
+	public int bestMove() {//we have possibleMoves and we want to find the max of it
 		Comparator<Integer> cmp = new Comparator<Integer>(){
 			public int compare(Integer first, Integer second) {
 				int a = move(first).minimax();
